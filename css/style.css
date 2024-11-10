@@ -988,4 +988,78 @@ header nav ul li a:hover {
   gap: 1rem; /* Space between LinkedIn and phone */
 }
 
+.cta-button {
+  text-align: center;
+  font-size: 1rem;
+  line-height: clamp(2.875rem, 8vw, 3.5rem);
+  text-decoration: none;
+  font-weight: 700;
+  min-width: 12rem; /* Adjusted width for longer text */
+  margin: 0;
+  color: #fff;
+  padding: 0 3rem;
+  box-sizing: border-box;
+  background-color: #1a1a1a;
+  display: inline-block;
+  position: relative;
+  overflow: hidden; /* Ensures :before element stays within button bounds */
+  z-index: 1;
+}
+
+.cta-button:before {
+  content: '';
+  width: 150%;
+  height: 110%;
+  background: var(--primary);
+  position: absolute;
+  top: 50%;
+  left: -100%; /* Start position off the left edge */
+  transform: skew(45deg) translateY(-50%);
+  transition: left 0.3s ease-in-out; /* Smooth animation on hover */
+  z-index: -1; /* Ensure :before is behind the text */
+}
+
+.cta-button:hover:before {
+  left: 0; /* Move :before element fully across the button on hover */
+}
+
+
+.cs-button-4 {
+  text-align: center;
+  font-size: 1rem;
+  /* 46px - 56px */
+  line-height: clamp(2.875rem, 8vw, 3.5rem);
+  text-decoration: none;
+  font-weight: 700;
+  min-width: 10.875rem;
+  margin: 0;
+  overflow: hidden;
+  color: #fff;
+  padding: 0 3rem;
+  /* prevents padding and border from affecting height and width */
+  box-sizing: border-box;
+  background-color: #1a1a1a;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+.cs-button-4:before {
+  content: '';
+  width: 150%;
+  height: 110%;
+  background: var(--primary);
+  opacity: 1;
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: -130%;
+  z-index: -2;
+  transform: skew(45deg) translateY(-50%);
+  transition: left .3s;
+}
+.cs-button-4:hover:before {
+  left: -20%;
+}
+                              
+
                             

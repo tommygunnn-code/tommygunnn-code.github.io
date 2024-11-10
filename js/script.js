@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             // Simulate form submission (you can replace this with actual email sending code)
-            alert(`Thank you, ${name}! Your message has been received.`);
+            alert(`Thank you, ${name}, a member of our team will be in touch with you soon.`);
             contactForm.reset();
         });
     }

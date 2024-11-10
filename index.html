@@ -64,7 +64,11 @@
     <section id="contact">
         <div class="container">
             <h2>Connect With Us</h2>
-            <form id="contact-form">
+            <form id="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                <!-- Honeypot Field for Spam Protection -->
+                <div style="display:none">
+                    <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
+                </div>
                 <input type="text" id="name" name="name" placeholder="Your Name" required>
                 <input type="email" id="email" name="email" placeholder="Your Email" required>
                 <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
@@ -72,6 +76,7 @@
             </form>
         </div>
     </section>
+    
 
     <!-- Footer Section -->
     <footer>

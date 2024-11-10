@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  color: #333;
+  color: #212228;
   margin: 0;
   padding: 0;
 }
@@ -19,7 +19,7 @@ body {
 
 /* Header Styles */
 header {
-    background: #fff;
+    background: #f9f9f9;
     border-bottom: 1px solid #ddd;
 }
 
@@ -50,17 +50,17 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #007BFF;
+    color: #ff00c3;
 }
 
 /* Hero Section */
 .hero {
-    background-image: url('../assets/images/background.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    text-align: center;
-    padding: 100px 0;
+  background-image: url('../assets/images/hero.png');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 200px 0 100px 0; /* Increase top padding slightly to move content down */
 }
 
 .hero h1 {
@@ -109,7 +109,7 @@ header nav ul li a:hover {
 
 .service-item i {
     font-size: 50px;
-    color: #007BFF;
+    color: #5c9fbc;
     margin-bottom: 20px;
 }
 
@@ -235,7 +235,7 @@ header nav ul li a {
 header nav ul li a.active,
 header nav ul li a:hover {
     background-color: #007BFF;
-    color: #fff;
+    color: #f9f9f9;
 }
 
 /* About Page Styles */
@@ -282,7 +282,7 @@ header nav ul li a:hover {
 #contact-form button {
     width: 100%;
     padding: 15px;
-    background: #007BFF;
+    background: #105c9f;
     color: #fff;
     border: none;
     font-size: 18px;
@@ -291,7 +291,7 @@ header nav ul li a:hover {
 }
 
 #contact-form button:hover {
-    background: #0056b3;
+    background: #026ad9;
 }
 
 .contact-info {
@@ -348,7 +348,7 @@ header nav ul li a:hover {
       content: "";
       width: 100%;
       height: 100%;
-      background: #fff;
+      background: #f9f9f9;
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       opacity: 1;
       /* 12px - 24px */
@@ -465,7 +465,7 @@ header nav ul li a:hover {
     #cs-navigation .cs-line {
       width: 100%;
       height: 2px;
-      background-color: #fafbfc;
+      background-color: #f9f9f9;
       border-radius: 2px;
       position: absolute;
       left: 50%;
@@ -497,7 +497,7 @@ header nav ul li a:hover {
       width: 100%;
       height: auto;
       padding-bottom: 2.4em;
-      background-color: #fff;
+      background-color: #f9f9f9;
       border-radius: 0 0 1.5rem 1.5rem;
       position: absolute;
       top: 85%;

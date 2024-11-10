@@ -994,34 +994,38 @@ header nav ul li a:hover {
   line-height: clamp(2.875rem, 8vw, 3.5rem);
   text-decoration: none;
   font-weight: 700;
-  min-width: 12rem; /* Adjusted width for longer text */
-  margin: 0;
+  min-width: 12rem;
   color: #fff;
   padding: 0 3rem;
-  box-sizing: border-box;
   background-color: #1a1a1a;
   display: inline-block;
   position: relative;
-  overflow: hidden; /* Ensures :before element stays within button bounds */
+  overflow: hidden;
+  cursor: pointer;
   z-index: 1;
+  border: none;
+  border-radius: 8px; /* Slightly rounded corners */
+  box-sizing: border-box;
 }
 
-.cta-button:before {
+.cta-button::before {
   content: '';
+  position: absolute;
+  top: 50%; /* Start from the center vertically */
+  left: -130%; /* Start fully outside on the left */
   width: 150%;
   height: 110%;
-  background: var(--primary);
-  position: absolute;
-  top: 50%;
-  left: -100%; /* Start position off the left edge */
-  transform: skew(45deg) translateY(-50%);
-  transition: left 0.3s ease-in-out; /* Smooth animation on hover */
-  z-index: -1; /* Ensure :before is behind the text */
+  background-color: #ff6a3e; /* Orange color */
+  transform: skew(45deg) translateY(-50%); /* Skewed shape for the animation */
+  transition: left 0.3s ease; /* Smooth transition */
+  z-index: -1;
+  border-radius: 8px; /* Match the button’s rounded corners */
 }
 
-.cta-button:hover:before {
-  left: 0; /* Move :before element fully across the button on hover */
+.cta-button:hover::before {
+  left: -20%; /* Moves the background in to cover most of the button */
 }
+
 
 
 .cs-button-4 {

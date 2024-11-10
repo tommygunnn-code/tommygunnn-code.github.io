@@ -969,4 +969,23 @@ header nav ul li a:hover {
       display: flex;
     }
   }
-                                  
+  .cs-linkedin i {
+    color: #6c757d; /* Slate grey color for LinkedIn icon */
+    font-size: 1.2rem; /* Adjusts icon size for better alignment */
+}
+
+/* Ensure cs-container aligns items horizontally */
+.cs-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Ensure the contact info section displays items inline */
+.cs-contact-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Space between LinkedIn and phone */
+}
+
+                            

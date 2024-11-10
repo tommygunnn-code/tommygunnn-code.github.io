@@ -232,12 +232,11 @@ header nav ul li a {
     border-radius: 5px;
 }
 
-header nav ul li a.active,
-header nav ul li a:hover {
-    background-color: #007BFF;
-    color: #f9f9f9;
+.cs-li-link.cs-active,
+.cs-li-link:hover {
+    background-color: transparent; /* Remove background color */
+    color: #007BFF; /* Optional: Change text color on hover */
 }
-
 /* About Page Styles */
 #about-page {
     padding: 60px 0;
@@ -1066,6 +1065,30 @@ header nav ul li a:hover {
 .cs-button-4:hover:before {
   left: -20%;
 }
-                              
 
-                            
+/* Navigation Link Styles */
+.cs-li-link {
+  position: relative; /* Required for positioning the ::after element */
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+/* Underline Effect */
+.cs-li-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Position the line below the text */
+  width: 0;
+  height: 2px; /* Thickness of the underline */
+  background-color: #007BFF; /* Color of the underline */
+  transition: width 0.4s ease; /* Duration and easing of the animation */
+}
+
+/* Expand the Underline on Hover */
+.cs-li-link:hover::after,
+.cs-li-link.cs-active::after {
+  width: 100%;
+}

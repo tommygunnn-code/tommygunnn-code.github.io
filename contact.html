@@ -6,42 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Link to CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Header Section -->
-    <!-- ============================================ -->
-    <!--                 Navigation                   -->
-    <!-- ============================================ -->
-    <header id="cs-navigation">
-        <div class="cs-container">
-            <!--Nav Logo-->
-            <a href="index.html" class="cs-logo" aria-label="back to home">
-                <img src="assets/images/logo.png" alt="Atomsense Logo" width="210" height="29" aria-hidden="true" decoding="async">
-            </a>
-            <!--Navigation List-->
-            <nav class="cs-nav" role="navigation">
-                <!--Mobile Nav Toggle-->
-                <button class="cs-toggle" aria-label="mobile menu toggle">
-                    <div class="cs-box" aria-hidden="true">
-                        <span class="cs-line cs-line1" aria-hidden="true"></span>
-                        <span class="cs-line cs-line2" aria-hidden="true"></span>
-                        <span class="cs-line cs-line3" aria-hidden="true"></span>
-                    </div>
-                </button>
-                <div class="cs-ul-wrapper">
-                    <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
-                        <li class="cs-li">
-                            <a href="index.html" class="cs-li-link cs-active">Home</a>
-                        </li>
-                        <li class="cs-li">
-                            <a href="about.html" class="cs-li-link">About Us</a>
-                        </li>
-                        <li class="cs-li">
-                            <a href="contact.html" class="cs-li-link">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
+</head>
+<body>
+
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
 
     <!-- Contact Content -->
     <section id="contact-page">
@@ -57,7 +26,6 @@
                 <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
                 <button type="submit" class="btn">Send Message</button>
             </form>
-            <!-- Optional: Add contact details -->
             <div class="contact-info">
                 <h2>Our Office</h2>
                 <p>
@@ -80,5 +48,17 @@
 
     <!-- Link to JavaScript -->
     <script src="js/script.js"></script>
+
+    <!-- Script to load header.html into header-placeholder -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("header-placeholder").innerHTML = data;
+                })
+                .catch(error => console.error("Error loading header:", error));
+        });
+    </script>
 </body>
 </html>

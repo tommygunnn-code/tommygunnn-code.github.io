@@ -8,42 +8,9 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <!-- ============================================ -->
-    <!--                 Navigation                   -->
-    <!-- ============================================ -->
-    <header id="cs-navigation">
-        <div class="cs-container">
-            <!--Nav Logo-->
-            <a href="index.html" class="cs-logo" aria-label="back to home">
-                <img src="assets/images/logo.png" alt="Atomsense Logo" width="210" height="29" aria-hidden="true" decoding="async">
-            </a>
-            <!--Navigation List-->
-            <nav class="cs-nav" role="navigation">
-                <!--Mobile Nav Toggle-->
-                <button class="cs-toggle" aria-label="mobile menu toggle">
-                    <div class="cs-box" aria-hidden="true">
-                        <span class="cs-line cs-line1" aria-hidden="true"></span>
-                        <span class="cs-line cs-line2" aria-hidden="true"></span>
-                        <span class="cs-line cs-line3" aria-hidden="true"></span>
-                    </div>
-                </button>
-                <div class="cs-ul-wrapper">
-                    <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
-                        <li class="cs-li">
-                            <a href="index.html" class="cs-li-link cs-active">Home</a>
-                        </li>
-                        <li class="cs-li">
-                            <a href="about.html" class="cs-li-link">About Us</a>
-                        </li>
-                        <li class="cs-li">
-                            <a href="contact.html" class="cs-li-link">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
+
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
 
     <!-- About Us Content -->
     <section id="about-page">
@@ -63,7 +30,6 @@
             <p>
                 Our team consists of seasoned professionals with diverse backgrounds in data analysis, software engineering, and strategic consulting.
             </p>
-            <!-- Add more content as needed -->
         </div>
     </section>
 
@@ -76,5 +42,17 @@
 
     <!-- Link to JavaScript -->
     <script src="js/script.js"></script>
+
+    <!-- Script to load header.html into header-placeholder -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("header-placeholder").innerHTML = data;
+                })
+                .catch(error => console.error("Error loading header:", error));
+        });
+    </script>
 </body>
 </html>

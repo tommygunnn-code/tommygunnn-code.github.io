@@ -22,3 +22,37 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Mobile navigation toggling
+var CSbody = document.querySelector("body");
+const CSnavbarMenu = document.querySelector("#cs-navigation");
+const CShamburgerMenu = document.querySelector("#cs-navigation .cs-toggle");
+
+CShamburgerMenu.addEventListener('click', function() {
+    CShamburgerMenu.classList.toggle("cs-active");
+    CSnavbarMenu.classList.toggle("cs-active");
+    CSbody.classList.toggle("cs-open");
+    ariaExpanded();
+});
+
+// Update aria-expanded attribute
+function ariaExpanded() {
+    const csUL = document.querySelector('#cs-expanded');
+    const csExpanded = csUL.getAttribute('aria-expanded');
+    csUL.setAttribute('aria-expanded', csExpanded === 'false' ? 'true' : 'false');
+}
+
+// Mobile nav dropdown functionality
+const dropDowns = Array.from(document.querySelectorAll('#cs-navigation .cs-dropdown'));
+dropDowns.forEach(item => {
+    item.addEventListener('click', () => {
+        item.classList.toggle('cs-active');
+    });
+});
+
+// Scroll animation for the header
+document.addEventListener('scroll', () => { 
+    const scroll = document.documentElement.scrollTop;
+    document.body.classList.toggle('scroll', scroll >= 100);
+});
+

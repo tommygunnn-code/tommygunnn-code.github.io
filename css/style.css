@@ -1079,12 +1079,13 @@ header nav ul li a {
 .cs-li-link::after {
   content: '';
   position: absolute;
-  left: 0;
-  bottom: -5px; /* Position the line below the text */
+  left: 50%; /* Start at the middle */
+  bottom: -3px; /* Position the line below the text */
   width: 0;
   height: 2px; /* Thickness of the underline */
-  background-color: #007BFF; /* Color of the underline */
-  transition: width 0.4s ease; /* Duration and easing of the animation */
+  background-color: #0a4690; /* Color of the underline */
+  transform: translateX(-50%); /* Center the underline horizontally */
+  transition: width 0.6s ease; /* Duration and easing of the animation */
 }
 
 /* Expand the Underline on Hover */
@@ -1092,3 +1093,4 @@ header nav ul li a {
 .cs-li-link.cs-active::after {
   width: 100%;
 }
+
